@@ -18,7 +18,7 @@ A sleek and responsive weather forecast application built using **React + Vite**
 
 ## 📷 Preview
 
-![App Screenshot](./screenshot.png)
+![App Screenshot](./weather SS.png)
 ![Uploading image.png…]()
 
 ---
