@@ -5,7 +5,7 @@ const Dashboard = () => {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(false);
-
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
   const fetchWeather = async () => {
     if (!city.trim()) {
       alert("City name likho bhai!");
@@ -15,7 +15,7 @@ const Dashboard = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=618cbfa84e667b8af13307080225a0e3&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
       );
       const data = await response.json();
 
