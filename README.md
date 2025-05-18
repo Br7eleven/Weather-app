@@ -39,3 +39,11 @@ A sleek and responsive weather forecast application built using **React + Vite**
 git clone https://github.com/Br7eleven/Weather-app.git
 cd Weather-app
 ```
+# Create .env file with your API key
+echo "VITE_WEATHER_API_KEY=your_openweathermap_api_key_here" > .env
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
