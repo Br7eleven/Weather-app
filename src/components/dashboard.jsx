@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import WeatherCard from "./weathercard";
+import WeatherCard from "./WeatherCard";
 
 const Dashboard = () => {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(false);
   const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+
   const fetchWeather = async () => {
     if (!city.trim()) {
       alert("City name likho bhai!");
@@ -33,10 +34,10 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-cyan-900 p-4">
+    <div className="flex items-center justify-center p-4 h-full">
       <div className="bg-white/20 backdrop-blur-lg p-6 rounded-2xl w-full max-w-md text-white shadow-xl space-y-6">
         <h1 className="text-3xl font-bold text-center">🌤️ Weather App</h1>
-        
+
         <input
           type="text"
           placeholder="Enter city"
@@ -44,7 +45,7 @@ const Dashboard = () => {
           onChange={(e) => setCity(e.target.value)}
           className="w-full p-3 rounded-lg bg-white/10 border border-white/30 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white"
         />
-        
+
         <button
           onClick={fetchWeather}
           className="w-full py-3 bg-white/30 hover:bg-white/50 transition-all rounded-lg font-semibold"
